@@ -1,38 +1,76 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.header h1 {
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-container {
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  width: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form input {
+  width: 80%;
+  padding-left: 5px;
+  font-size: 1rem;
+}
+
+.form button {
+  width: 20%;
+  font-size: 1rem;
+}
+
+.select-container {
+  margin-left: 10px;
+}
+
+.select-container #select{
+  font-size: 1rem;
+}
+
+.todo-container {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
+  height: 50px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content .text{
+  max-width: 400px;
+  width: 200px;
+  height: 100%;
+  text-align: left;
+  color: #fff;
+  background: #000;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+
+.content .btns {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content .btns button {
+  height:  50%;
 }
