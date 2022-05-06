@@ -6,6 +6,7 @@
 
 
 .header h1 {
+  margin: 20px 0px 20px 0px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -13,64 +14,128 @@
 .form-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left top, #E8F9FD, #79DAE8);
+  height: 100px;
 }
 
 .form {
-  width: 300px;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form input {
-  width: 80%;
-  padding-left: 5px;
+  width: 70%;
+  height: 100%;
+  padding:0 5px 0px 5px;
   font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  overflow: scroll;
 }
 
 .form button {
   width: 20%;
+  height: 100%;
+  border: none;
   font-size: 1rem;
+  cursor: pointer;
+  background: #000;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .select-container {
   margin-left: 10px;
+  height: 50px;
 }
 
 .select-container #select{
+  height: 100%;
   font-size: 1rem;
+  border: none;
+  background: #fff;
 }
 
 .todo-container {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
-  height: 50px;
   align-items: center;
 }
 
 .content {
+  max-width: 400px;
+  height: 100px;
+  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   font-size: 1rem;
   margin-bottom: 10px;
+  border: none;
+  box-shadow: 1px 1px 10px #000;
+  border-radius: 5px;
 }
 
 .content .text{
-  max-width: 400px;
-  width: 200px;
-  height: 100%;
+  /* max-width: 400px; */
+  width: 70%;
+  /* height: 100%; */
+  align-self: center;
   text-align: left;
-  color: #fff;
-  background: #000;
   font-size: 1.3rem;
   padding: 10px;
+  /* background: #DFDFDE; */
+  /* border-radius:  5px; */
+  border: none;
+  overflow: auto;
+  /* box-shadow: 1px 1px 5px #000; */
 }
 
 
 .content .btns {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20%;
 }
 
 .content .btns button {
-  height:  50%;
+  height: 30px;
+  width: 50px;
+  border-radius:  5px;
+  border: none;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .form-container {
+    flex-direction: column;
+    height: 200px;
+    padding: 10px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+
+  .select-container {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+
+  .select-container #select {
+    width: 100%;
+    border-radius: 5px;
+  }
 }
