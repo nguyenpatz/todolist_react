@@ -16,10 +16,12 @@ const Todo = ({todo, todos, setTodos}) => {
 		);
 	}
 
+	//style={{textDecoration: todo.completed ? "line-through" : ""}}
+
 	return (
 		<div className="content">
-			<p className="text"
-				style={{textDecoration: todo.completed ? "line-through" : ""}}>{todo.text}</p>
+			<p className={`text ${todo.completed ? "completed" : ""}`}
+				>{todo.text}</p>
 			<div className="btns">
 				<button onClick={checkComplete} className="btn-check fa-solid fa-check"></button>
 				<button onClick={deleteWork} className="btn-delete fa-solid fa-trash-can"></button>
